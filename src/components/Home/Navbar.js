@@ -39,7 +39,7 @@ export default function Navbar()
                 <Toolbar className={classes.navstyles}>
                 
                     <Typography variant="h6"   >
-                       Petticoats Bazaar
+                       Pettycoats Bazaar
                     </Typography>
                     
                     <span className={classes.toolbarButtons}>

@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme)=>({
      },
      cartbutton:{
         backgroundColor:"maroon",
-        marginLeft: theme.spacing(4)
+        marginLeft: theme.spacing(8)
      },
      bnowbutton:{
         backgroundColor:"green",
@@ -57,6 +57,12 @@ export default function Product(props) {
                 <Grid md={1} >
                   <div className={classes.smallcard}>
                      <img src="/kucchi.jpg" style={{maxWidth:"100%", maxHeight:"100%"}} onMouseEnter={()=>{setMainImg("/kucchi.jpg")}} />
+                  </div>
+                  <div className={classes.smallcard}>
+                     <img src="/cross.jpg" style={{maxWidth:"100%", maxHeight:"100%"}} onMouseEnter={()=>{setMainImg("/cross.jpg")}}/>
+                  </div>
+                  <div className={classes.smallcard}>
+                     <img src="/ready.jpg" style={{maxWidth:"100%", maxHeight:"100%"}} onMouseEnter={()=>{setMainImg("/ready.jpg")}}/>
                   </div>
                   <div className={classes.smallcard}>
                      <img src="/cross.jpg" style={{maxWidth:"100%", maxHeight:"100%"}} onMouseEnter={()=>{setMainImg("/cross.jpg")}}/>
@@ -127,9 +133,9 @@ export default function Product(props) {
                 </Grid>
                 <Grid md={6} style={{textAlign:"left",fontSize:"20px"}}>
                     <Grid md={12}>
-                            <h1> Women's Cross Type Petti Coat  </h1>
+                            <h1> Women's Cross Type Petty Coat  </h1>
                         
-                            <p>Cross Type Petti Coat is made of high quality material and Stitched Carefully by our expertised tailors.
+                            <p>Cross Type Petty Coat is made of high quality material and Stitched Carefully by our expertised tailors.
                             Material is color proof and Long lasting made of cotton.
                             </p>
                     </Grid>

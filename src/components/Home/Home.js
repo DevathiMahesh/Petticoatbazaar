@@ -145,17 +145,17 @@ export default function Home(){
         {
             src: "/cross.jpg",
             title: "Cross Type",
-            description:"Cross Type Petti Coat made with High Quality material of 2 Meters. "
+            description:"Cross Type Petty Coat made with High Quality material of 2 Meters. "
         },
         {
             src: "/kucchi.jpg",
             title: "Kucchi Type",
-          description:"Kucchi Type Petti Coat made with High Quality material of 2 Meters.  "
+          description:"Kucchi Type Petty Coat made with High Quality material of 2 Meters.  "
         },
         {
-            src: "/cross.jpg",
+            src: "/ready.jpg",
             title: "Ready Made ",
-            description:"Ready Made Petti coats of other brands also available with us"
+            description:"Ready Made Petty coats of other brands also available with us"
         },
         
     ];
@@ -191,7 +191,7 @@ export default function Home(){
                             <br/>
                             
                            <span className="text_1"> 
-                               Want to Buy High Quality,Long Lasting Petticoats at 
+                               Want to Buy High Quality,Long Lasting Pettycoats at 
                                 <br/>
                                Affordable Rates??
                             </span>
@@ -230,7 +230,7 @@ export default function Home(){
                             About Us
                             <br/>
                             <p style={{fontFamily:"Atma",fontSize:"45px"}}>
-                                We are the leading petti coats manufacturers in our area for the past decade.<br/>
+                                We are the leading Petty coats manufacturers in our area for the past decade.<br/>
                                 Thousands of Customers are delighted with the quality of the products that we <br/>
                                 deliver and their satisfaction is the ultimate goal for us.
                             </p>

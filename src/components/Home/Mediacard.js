@@ -13,6 +13,7 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Product from '../Product/Product';
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 const useStyles = makeStyles((theme)=>({
   root: {
     // maxwidth: 340,
@@ -64,6 +65,7 @@ export default function MediaCard(props) {
     <>
     <Card  className={classes.root}>
       <CardActionArea>
+     
         <CardMedia
           className={classes.media}
           image={props.item.src}
@@ -71,17 +73,19 @@ export default function MediaCard(props) {
           onMouseEnter={()=>setShowMore(true)}
           onMouseLeave={()=>setShowMore(false)}
         >
-           {showMore?<Button variant="contained"
-                                   color="primary"
-                                   style={{marginTop:"30%",opacity:2}}
+           {/* {showMore?<Button variant="outlined"
+                                   color="text"
+                                   style={{positionmarginTop:"30%",opacity:2,color:"white"}}
                                    onClick={()=>setOpen(true)} 
                                    className={classes.mbutton}>
                                           Show More
-           </Button>:null}
+           </Button>:null} */}
+           <AddCircleIcon onClick={()=>setOpen(true)} style={{color:"crimson",fontSize:"50px",position:"relative",right:"-160px",top:"200px"}}/>
         </CardMedia>
+      
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-          {props.item.title}
+          {props.item.title} 
           </Typography>
           <Typography variant="body2"  component="p">
             <span style={{color:"purple",fontStyle:"bold"}}>{props.item.description}</span>
