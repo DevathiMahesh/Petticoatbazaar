@@ -125,7 +125,7 @@ export default function MediaCard(props) {
                           >
                           <Fade in={open}>
                             <div className={classes.mpaper}>
-                              <Product/>
+                              <Product setOpen={setOpen}/>
                              </div>
                             
                           </Fade>
