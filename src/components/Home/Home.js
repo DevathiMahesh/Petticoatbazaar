@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import {FormControl,InputLabel,Input,FormHelperText,TextField,Button,Container} from '@material-ui/core'
 
 import Carousel from 'react-material-ui-carousel'
-
+import Typewriter from 'typewriter-effect/dist/core';
 import MenuItem from '@material-ui/core/MenuItem';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -189,9 +189,12 @@ export default function Home(){
                             <div style={{textAlign:"center",marginTop:"6%",color:"white",fontSize:"30px"}}>
                             Grab On 20% Discount !!!
                             <br/>
-                            Want to Buy High Quality,Long Lasting Petticoats at 
-                            <br/>
-                            Affordable Rates??
+                            
+                           <span className="text_1"> 
+                               Want to Buy High Quality,Long Lasting Petticoats at 
+                                <br/>
+                               Affordable Rates??
+                            </span>
                             </div>
                         </ThemeProvider>
                         <Grid container   style={{height:"auto",textAlign:"center",contentAlign:"center"}}>
@@ -231,6 +234,7 @@ export default function Home(){
                                 Thousands of Customers are delighted with the quality of the products that we <br/>
                                 deliver and their satisfaction is the ultimate goal for us.
                             </p>
+                            <img src="/petticoat.png" className={classes.title} height="150px" width="300px" />
                              <br/>
                                                     
                         

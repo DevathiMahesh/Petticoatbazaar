@@ -1,1 +1,43 @@
 ::-webkit-scrollbar {display:none;}
+@keyframes typewriter {
+    0%, 100% {
+      width: 0;
+    }
+    20%, 90% {
+      width:25em;
+    }
+  }
+  
+  @keyframes caret {
+    0%, 100% {
+      opacity: 0;
+    }
+    70% {
+      opacity: 1;
+    }
+  }
+  
+  .text_1 {
+    overflow: auto;
+    white-space: nowrap;
+    animation: typewriter;
+    display: inline-block;
+    position: relative;
+    animation-duration: 10s;
+    animation-timing-function: steps(25, end);
+    animation-iteration-count: infinite;
+  }
+  
+  
+  .text_1::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    animation: caret infinite;
+    animation-duration: 1s;
+    animation-timing-function: steps(1, end);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }

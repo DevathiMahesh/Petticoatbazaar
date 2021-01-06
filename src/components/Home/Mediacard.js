@@ -9,34 +9,76 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid'
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
-const useStyles = makeStyles({
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+import Product from '../Product/Product';
+const useStyles = makeStyles((theme)=>({
   root: {
     // maxwidth: 340,
     // width:"90%",
     minWidth:"auto",
-    borderRadius:25
+    borderRadius:25,
+    
   },
+  overlay: {
+    position: 'absolute',
+    top: '20px',
+    left: '20px',
+    color: 'black',
+    backgroundColor: 'white'
+ },
   media: {
-    height: 250,
-    hover:{
-
+    height: 230,
+    '&:hover':{
+       opacity:0.8
     }
-  
+    
   },
-});
+  mbutton:{
+    '&:hover':{
+       opacity:1
+    }
+  },
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  mpaper: {
+    backgroundColor: theme.palette.background.paper,
+   
+    borderRadius:"0px",
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+    width:"80%",
+    height:"600px"
+  },
+}));
 
 export default function MediaCard(props) {
   const classes = useStyles();
-
+  const [showMore,setShowMore] = React.useState(false);
+  const [open,setOpen] = React.useState(false);
   return (
-    
+    <>
     <Card  className={classes.root}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
           image={props.item.src}
           title={props.item.title}
-        />
+          onMouseEnter={()=>setShowMore(true)}
+          onMouseLeave={()=>setShowMore(false)}
+        >
+           {showMore?<Button variant="contained"
+                                   color="primary"
+                                   style={{marginTop:"30%",opacity:2}}
+                                   onClick={()=>setOpen(true)} 
+                                   className={classes.mbutton}>
+                                          Show More
+           </Button>:null}
+        </CardMedia>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
           {props.item.title}
@@ -69,6 +111,25 @@ export default function MediaCard(props) {
       </CardActionArea>
       
     </Card>
-    
+    <Modal
+                            aria-labelledby="transition-modal-title"
+                            aria-describedby="transition-modal-description"
+                            className={classes.modal}
+                            open={open}
+                            onClose={()=>{}}
+                            closeAfterTransition
+                            BackdropComponent={Backdrop}
+                            BackdropProps={{
+                              timeout: 500,
+                            }}
+                          >
+                          <Fade in={open}>
+                            <div className={classes.mpaper}>
+                              <Product/>
+                             </div>
+                            
+                          </Fade>
+        </Modal>
+    </>    
   );
 }
