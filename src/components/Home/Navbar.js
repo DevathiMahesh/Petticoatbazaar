@@ -5,6 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from '@material-ui/core/Button';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import history from '../../utils/history';
 const useStyles = makeStyles(theme => ({
     root: {
       flexGrow: 1
@@ -43,11 +44,11 @@ export default function Navbar()
                     </Typography>
                     
                     <span className={classes.toolbarButtons}>
-                        <a href="#home" className={classes.toolbarButtons}>
+                        <a href="#" className={classes.toolbarButtons} onClick={()=>history.push("/")}>
                           Home </a>
-                        <a href="#contact" className={classes.toolbarButtons}> Contact</a>
-                        <a href="#about" className={classes.toolbarButtons}> About</a>
-                        <AddShoppingCartIcon/>
+                        <a href="#contact" className={classes.toolbarButtons} onClick={()=>history.push("/#contact")}> Contact</a>
+                        <a href="#about" className={classes.toolbarButtons} onClick={()=>history.push("/#about")}> About</a>
+                        <AddShoppingCartIcon onClick={()=>history.push("/cart")}/>
                     </span>
              </Toolbar>
          </AppBar>
